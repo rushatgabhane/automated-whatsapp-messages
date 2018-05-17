@@ -25,7 +25,7 @@ for i in range(count):
     msg_box.send_keys(str(i+1) + message + variable_storing_file_data[i])
     button = driver.find_element_by_class_name('_2lkdt')
     button.click()
-    #interval between messages in seconds
+    # interval between messages in seconds
     time.sleep(0.5)
 
 f.close()
