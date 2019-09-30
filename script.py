@@ -1,11 +1,18 @@
 from selenium import webdriver
 import time
+import random
+import string
 
 driver = webdriver.Chrome()
 driver.get('https://web.whatsapp.com/')
 
+def random_string_generator(str_size, allowed_chars):
+    return ''.join(random.choice(allowed_chars) for x in range(str_size))
+
+chars = string.ascii_letters + string.punctuation
+
 # to be initialized
-filepath = 'data.txt'
+size = 12
 name = "chat_name"
 message = " your_message "
 count = 10
